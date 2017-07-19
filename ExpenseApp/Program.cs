@@ -11,14 +11,42 @@ namespace Expenses
         public string Description { get; set; }
         public double Amount { get; set; }
     }
+    class UI : IUI
+    {
+        public void DisplayWelcomeMessage()
+        {
+            Console.WriteLine("Welcome to the awesome expenses app.");
+        }
+        public void DisplayPendingExpense(ExpenseRequest expense)
+        {
+            Console.WriteLine("There is a 1 pending request awaiting your approval");
+            Console.WriteLine($"Mark Kirschstein ({expense.PayrollId}) - £{expense.Amount} for {expense.Description}");
+        }
+        public void DeclineRequest()
+        {
+            Console.WriteLine("Expense declined.");
+        }
+        public void Exit()
+        {
+            Console.WriteLine("Press any key to quit");
+            Console.Read();
+        }
+
+    }
 
     class Program
     {
         static void Main(string[] args)
         {
-            DisplayWelcomeMessage();
+            var ui = new UI();
+            Main(ui);
+        }
+
+        static void Main(UI ui)
+        {
+            ui.DisplayWelcomeMessage();
             var expense = GetPendingExpenseRequest();
-            DisplayPendingExpense(expense);
+            ui.DisplayPendingExpense(expense);
             var approvalDecision = GetApprovalForRequest();
             if (approvalDecision == "YES")
             {
@@ -26,20 +54,9 @@ namespace Expenses
             }
             else
             {
-                DeclineRequest();
+                ui.DeclineRequest();
             }
-            Exit();
-        }
-
-        private static void Exit()
-        {
-            Console.WriteLine("Press any key to quit");
-            Console.Read();
-        }
-
-        private static void DeclineRequest()
-        {
-            Console.WriteLine("Expense declined.");
+            ui.Exit();
         }
 
         private static void ApproveRequest(ExpenseRequest expense)
@@ -57,10 +74,6 @@ namespace Expenses
             return Console.ReadLine();
         }
 
-        private static void DisplayWelcomeMessage()
-        {
-            Console.WriteLine("Welcome to the awesome expenses app.");
-        }
 
         private static ExpenseRequest GetPendingExpenseRequest()
         {
@@ -70,12 +83,6 @@ namespace Expenses
                 Description = "London Client Visit",
                 Amount = 125.66
             };
-        }
-
-        private static void DisplayPendingExpense(ExpenseRequest expense)
-        {
-            Console.WriteLine("There is a 1 pending request awaiting your approval");
-            Console.WriteLine($"Mark Kirschstein ({expense.PayrollId}) - £{expense.Amount} for {expense.Description}");
         }
 
         private static string SendRequestToPayRollServer(ExpenseRequest expense)
