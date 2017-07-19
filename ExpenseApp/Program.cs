@@ -11,6 +11,32 @@ namespace Expenses
         public string Description { get; set; }
         public double Amount { get; set; }
     }
+    interface IUI
+    {
+        void DeclineRequest();
+        void DisplayPendingExpense(ExpenseRequest expense);
+        void DisplayWelcomeMessage();
+        void Exit();
+    }
+
+    interface IPendingExpenseProvider
+    {
+        ExpenseRequest GetPendingExpenseRequest();
+    }
+
+    class PendingExpenseProvider : IPendingExpenseProvider
+    {
+        public ExpenseRequest GetPendingExpenseRequest()
+        {
+            return new ExpenseRequest
+            {
+                PayrollId = "75831",
+                Description = "London Client Visit",
+                Amount = 125.66
+            };
+        }
+    }
+
     class UI : IUI
     {
         public void DisplayWelcomeMessage()
@@ -39,13 +65,14 @@ namespace Expenses
         static void Main(string[] args)
         {
             var ui = new UI();
-            Main(ui);
+            var pep = new PendingExpenseProvider();
+            Main(ui, pep);
         }
 
-        static void Main(UI ui)
+        static void Main(IUI ui, IPendingExpenseProvider pep)
         {
             ui.DisplayWelcomeMessage();
-            var expense = GetPendingExpenseRequest();
+            var expense = pep.GetPendingExpenseRequest();
             ui.DisplayPendingExpense(expense);
             var approvalDecision = GetApprovalForRequest();
             if (approvalDecision == "YES")
@@ -72,17 +99,6 @@ namespace Expenses
             Console.WriteLine();
             Console.WriteLine("Type YES to approve. (Anything else will decline)");
             return Console.ReadLine();
-        }
-
-
-        private static ExpenseRequest GetPendingExpenseRequest()
-        {
-            return new ExpenseRequest
-            {
-                PayrollId = "75831",
-                Description = "London Client Visit",
-                Amount = 125.66
-            };
         }
 
         private static string SendRequestToPayRollServer(ExpenseRequest expense)
