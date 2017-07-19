@@ -13,10 +13,10 @@ namespace ExpenseApp
             Console.WriteLine("There is a 1 pending request awaiting your approval");
             Console.WriteLine("Mark Kirschstein (75831) - £125.66 for London Client Visit");
             Console.WriteLine();
-            Console.WriteLine("Type YES to approve. (Anything else will decline)");
+            Console.WriteLine("Type Y to approve. (Anything else will decline)");
             var approve = Console.ReadLine();
 
-            if (approve == "YES")
+            if (approve.ToUpper() == "Y")
             {
                 Console.WriteLine("Approving...");
                 var payRollId = "75831";
