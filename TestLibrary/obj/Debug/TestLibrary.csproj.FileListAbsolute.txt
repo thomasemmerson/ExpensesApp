@@ -1,0 +1,9 @@
+E:\Code\ExpenseApp\ExpenseApp\TestLibrary\bin\Debug\TestLibrary.dll
+E:\Code\ExpenseApp\ExpenseApp\TestLibrary\bin\Debug\TestLibrary.pdb
+E:\Code\ExpenseApp\ExpenseApp\TestLibrary\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\Code\ExpenseApp\ExpenseApp\TestLibrary\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+E:\Code\ExpenseApp\ExpenseApp\TestLibrary\obj\Debug\TestLibrary.csprojResolveAssemblyReference.cache
+E:\Code\ExpenseApp\ExpenseApp\TestLibrary\obj\Debug\TestLibrary.dll
+E:\Code\ExpenseApp\ExpenseApp\TestLibrary\obj\Debug\TestLibrary.pdb
+E:\Code\ExpenseApp\ExpenseApp\TestLibrary\bin\Debug\nunit.framework.dll
+E:\Code\ExpenseApp\ExpenseApp\TestLibrary\bin\Debug\nunit.framework.xml

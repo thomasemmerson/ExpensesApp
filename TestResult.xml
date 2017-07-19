@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="2" testcasecount="2" result="Failed" total="2" passed="1" failed="1" inconclusive="0" skipped="0" asserts="2" engine-version="3.7.0.0" clr-version="4.0.30319.42000" start-time="2017-07-19 12:42:32Z" end-time="2017-07-19 12:42:33Z" duration="0.771554">
+  <command-line><![CDATA[packages\NUnit.ConsoleRunner.3.7.0\tools\nunit3-console.exe  TestLibrary\bin\Debug\TestLibrary.dll]]></command-line>
+  <test-suite type="Assembly" id="0-1003" name="TestLibrary.dll" fullname="E:\Code\ExpenseApp\ExpenseApp\TestLibrary\bin\Debug\TestLibrary.dll" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2017-07-19 12:42:33Z" end-time="2017-07-19 12:42:33Z" duration="0.141699" total="2" passed="1" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="2">
+    <environment framework-version="3.7.1.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.10240.0" platform="Win32NT" cwd="E:\Code\ExpenseApp\ExpenseApp" machine-name="BRI45554L" user="tom.emmerson" user-domain="HQ" culture="en-GB" uiculture="en-US" os-architecture="x64" />
+    <settings>
+      <setting name="DisposeRunners" value="True" />
+      <setting name="WorkDirectory" value="E:\Code\ExpenseApp\ExpenseApp" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.5.2" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="NumberOfTestWorkers" value="8" />
+    </settings>
+    <properties>
+      <property name="_PID" value="10032" />
+      <property name="_APPDOMAIN" value="domain-" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="TestSuite" id="0-1004" name="TestLibrary" fullname="TestLibrary" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2017-07-19 12:42:33Z" end-time="2017-07-19 12:42:33Z" duration="0.108085" total="2" passed="1" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="2">
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="0-1000" name="Class1" fullname="TestLibrary.Class1" classname="TestLibrary.Class1" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2017-07-19 12:42:33Z" end-time="2017-07-19 12:42:33Z" duration="0.093720" total="2" passed="1" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="2">
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="0-1001" name="TestFirstTest" fullname="TestLibrary.Class1.TestFirstTest" methodname="TestFirstTest" classname="TestLibrary.Class1" runstate="Runnable" seed="2109600202" result="Failed" start-time="2017-07-19 12:42:33Z" end-time="2017-07-19 12:42:33Z" duration="0.038352" asserts="1">
+          <failure>
+            <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+            <stack-trace><![CDATA[at TestLibrary.Class1.TestFirstTest() in E:\Code\ExpenseApp\ExpenseApp\TestLibrary\Class1.cs:line 17
+]]></stack-trace>
+          </failure>
+          <assertions>
+            <assertion result="Failed">
+              <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+              <stack-trace><![CDATA[at TestLibrary.Class1.TestFirstTest() in E:\Code\ExpenseApp\ExpenseApp\TestLibrary\Class1.cs:line 17
+]]></stack-trace>
+            </assertion>
+          </assertions>
+        </test-case>
+        <test-case id="0-1002" name="TestSecondTest" fullname="TestLibrary.Class1.TestSecondTest" methodname="TestSecondTest" classname="TestLibrary.Class1" runstate="Runnable" seed="2141398876" result="Passed" start-time="2017-07-19 12:42:33Z" end-time="2017-07-19 12:42:33Z" duration="0.000261" asserts="1" />
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

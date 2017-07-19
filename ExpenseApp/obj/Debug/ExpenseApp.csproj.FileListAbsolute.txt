@@ -1,0 +1,6 @@
+E:\Code\ExpenseApp\ExpenseApp\ExpenseApp\bin\Debug\ExpenseApp.exe.config
+E:\Code\ExpenseApp\ExpenseApp\ExpenseApp\bin\Debug\ExpenseApp.exe
+E:\Code\ExpenseApp\ExpenseApp\ExpenseApp\bin\Debug\ExpenseApp.pdb
+E:\Code\ExpenseApp\ExpenseApp\ExpenseApp\obj\Debug\ExpenseApp.csprojResolveAssemblyReference.cache
+E:\Code\ExpenseApp\ExpenseApp\ExpenseApp\obj\Debug\ExpenseApp.exe
+E:\Code\ExpenseApp\ExpenseApp\ExpenseApp\obj\Debug\ExpenseApp.pdb
